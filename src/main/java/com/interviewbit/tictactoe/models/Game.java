@@ -7,7 +7,26 @@ public class Game {
     private List<Player> players;
     private List<Move> moves;
 
-    Game(Board board,List<Player> players){
+    private GameStatus gameStatus;
+    private Player winner;
+
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+
+    public void setGameStatus(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
+    }
+
+    public Player getWinner() {
+        return winner;
+    }
+
+    public void setWinner(Player winner) {
+        this.winner = winner;
+    }
+
+    Game(Board board, List<Player> players){
         this.board=board;
         this.players=players;
     }
